@@ -1,39 +1,36 @@
-1. # ОТКРЫТИЕ И ОСМОТР САЙТА
-☑ Главная страница открывается без ошибок
-☑ Контент отображается (блоки «Сервис», «О нас»)
-☑ Текст читаемый
-☑ Найдена кнопка «Оставить заявку на сервис»
-2.# DEVTOOLS → NETWORK
-☑ Открыл DevTools (F12)
-☑ Перешёл на вкладку Network
-☑ Поставил фильтр Fetch/XHR
-☑ Включил Keep log
-☑ Нашёл запрос calc.php (POST)
-☑ URL: https://stavagro.com/php/calc.php
-☑ Метод: POST
-☑ Формат: x-www-form-urlencoded
-☑ Headers просмотрены (Content-Type, Content-Length)
-☑ Payload просмотрен:
-☑ technical
-☑ service
-☑ name
-☑ phone
-☑ email
-☑ Response просмотрен: 1
-3.# POSTMAN → API-ТЕСТИРОВАНИЕ
-3.1.# Подготовка
-☑ Создал запрос POST https://stavagro.com/php/calc.php
-☑ Body → x-www-form-urlencoded
-☑ Добавил поля из Payload
-3.2.# Тест 1: false/false + пустые поля
-☑ Отправил: technical=false, service=false
-☑ name, phone, email — пустые
-☑ Ответ: 200 OK
-☑ Response: 1
-☑ Результат: FAIL
-3.3#. Тест 2: true/true + пустые поля
-☑ Отправил: technical=true, service=true
-☑ name, phone, email — пустые
-☑ Ответ: 200 OK
-☑ Response: 1
-☑ Результат: FAIL
+### 1. Открытие и осмотр сайта
+
+- [x] Главная страница открывается без ошибок
+- [x] Контент отображается (блоки «Сервис», «О нас»)
+- [x] Текст читаемый
+- [x] Найдена кнопка «Оставить заявку на сервис»
+
+### 2. DevTools → Network
+
+- [x] Открыт DevTools (F12)
+- [x] Вкладка Network работает
+- [x] Фильтр Fetch/XHR применён
+- [x] Keep log включён
+- [x] Найден запрос `calc.php` (POST)
+- [x] URL: `https://stavagro.com/php/calc.php`
+- [x] Метод: POST
+- [x] Формат: `x-www-form-urlencoded`
+- [x] Headers просмотрены
+- [x] Payload просмотрен (`technical`, `service`, `name`, `phone`, `email`)
+- [x] Response просмотрен (`1`)
+
+### 3. Postman → API-тестирование
+
+**Тест 1: `false/false` + пустые поля**
+- [x] Отправлен запрос с `technical=false, service=false`
+- [x] `name`, `phone`, `email` — пустые
+- [x] Ответ: `200 OK`
+- [x] Response: `1`
+- [x] Результат: ❌ **FAIL**
+
+**Тест 2: `true/true` + пустые поля**
+- [x] Отправлен запрос с `technical=true, service=true`
+- [x] `name`, `phone`, `email` — пустые
+- [x] Ответ: `200 OK`
+- [x] Response: `1`
+- [x] Результат: ❌ **FAIL**
